@@ -19,6 +19,11 @@ public class SimpleLedActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        int[] colors = new int[10];
+
+        for(int i=0; i < colors.length; i++)
+            colors[i] = Color.parseColor("#0face0");
+
         try {
             mLedstrip = Ws2801.create(BoardDefaults.getSPIPort(), Ws2801.Mode.RGB);
             mLedstrip.write(new int[]{Color.parseColor("#0face0")});

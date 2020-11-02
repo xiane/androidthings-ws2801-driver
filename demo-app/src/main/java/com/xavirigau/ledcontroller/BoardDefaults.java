@@ -7,6 +7,7 @@ public class BoardDefaults {
     private static final String DEVICE_EDISON = "edison";
     private static final String DEVICE_RPI3 = "rpi3";
     private static final String DEVICE_NXP = "imx6ul";
+    private static final String DEVICE_ODROIDN2 = "odroidn2";
     /**
      * Return the preferred I2C port for each board.
      */
@@ -19,6 +20,8 @@ public class BoardDefaults {
                 return "SPI0.0";
             case DEVICE_NXP:
                 return "SPI3_0";
+            case DEVICE_ODROIDN2:
+                return "SPI0.0";
             default:
                 throw new IllegalStateException("Unknown Build.DEVICE " + Build.DEVICE);
         }

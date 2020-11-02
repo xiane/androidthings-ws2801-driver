@@ -16,7 +16,7 @@ public class RainbowLedActivity extends Activity {
 
     private static final String TAG = RainbowLedActivity.class.getSimpleName();
     private static final int FRAME_DELAY_MS = 15;
-    private static final int NUM_LEDS = 1;
+    private static final int NUM_LEDS = 8;
 
     private final int[] mLedColors = new int[NUM_LEDS];
 

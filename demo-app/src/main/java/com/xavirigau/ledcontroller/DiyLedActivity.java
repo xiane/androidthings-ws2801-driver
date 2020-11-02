@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
 import com.google.android.things.pio.SpiDevice;
 
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class DiyLedActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         try {
-            PeripheralManagerService manager = new PeripheralManagerService();
+            PeripheralManager manager = PeripheralManager.getInstance();
             mDevice = manager.openSpiDevice(BoardDefaults.getSPIPort());
             configureSpiDevice(mDevice);
             byte[] b = {10/*R*/, 100 /*B*/, 40/*G*/};
